@@ -1,0 +1,30 @@
+Source: rpi-otp-ec-private-key
+Section: utils
+Priority: optional
+Maintainer: Richard Oliver <richard.oliver@raspberrypi.com>
+Build-Depends: debhelper-compat (= 13),
+               cargo,
+               rustc,
+               libssl-dev,
+               pkg-config,
+               pandoc,
+               rpi-eeprom
+Standards-Version: 4.6.0
+Homepage: https://raspberrypi.com/software
+Vcs-Git: https://github.com/raspberrypi/rpi-otp-ec-private-key.git
+Vcs-Browser: https://github.com/raspberrypi/rpi-otp-ec-private-key
+Rules-Requires-Root: no
+
+Package: rpi-otp-ec-private-key
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, raspi-utils-core
+Description: Generate ECDSA private key PEM from Raspberry Pi OTP
+ This utility reads a 32-byte private key from Raspberry Pi OTP (One Time
+ Programmable) memory and outputs a complete ECDSA private key in PEM format.
+ .
+ A valid SECP256R1 private key must already be stored in OTP.
+ .
+ This tool is related to rpi-otp-private-key but generates a complete PEM that
+ can be used directly with OpenSSL tools, rather than just raw bytes.
+ .
+ The generated key uses the SECP256R1 (P-256) curve. 

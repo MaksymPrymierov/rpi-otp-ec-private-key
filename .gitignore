@@ -1,0 +1,32 @@
+# Rust build artifacts
+target/
+**/*.rs.bk
+Cargo.lock
+
+# Debian build artifacts
+debian/rpi-otp-ec-private-key/
+debian/rpi-otp-ec-private-key.1
+debian/debhelper-build-stamp
+debian/files
+debian/.debhelper/
+debian/rpi-otp-ec-private-key.substvars
+debian/rpi-otp-ec-private-key.debhelper.log
+debian/tmp/
+*.tar.gz
+*.tar.xz
+*.tar.bz2
+*.orig.tar.gz
+*.debian.tar.xz
+*.debian.tar.gz
+*.build
+
+# Generated packages
+*.deb
+*.changes
+*.buildinfo
+*.dsc
+
+# Temporary files
+*.tmp
+*.bak
+*~

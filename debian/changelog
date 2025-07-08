@@ -1,0 +1,5 @@
+rpi-otp-ec-private-key (0.1.0) bookworm; urgency=medium
+
+  * Initial release
+
+ -- Richard Oliver <richard.oliver@raspberrypi.com>  Tue, 08 Jul 2025 16:42:32 +0100

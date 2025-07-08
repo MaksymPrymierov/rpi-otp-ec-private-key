@@ -1,0 +1,23 @@
+[package]
+name = "rpi-otp-ec-private-key"
+version = "0.1.0"
+edition = "2021"
+authors = ["Richard Oliver <richard.oliver@raspberrypi.com>"]
+description = "Generate ECDSA private key PEM from Raspberry Pi OTP"
+license = "BSD-3-Clause"
+homepage = "https://raspberrypi.com/software"
+repository = "https://github.com/raspberrypi/rpi-otp-ec-private-key"
+readme = "rpi-otp-ec-private-key.md"
+keywords = ["raspberry-pi", "ecdsa", "otp", "cryptography", "pem"]
+categories = ["cryptography", "embedded"]
+
+[dependencies]
+openssl = "0.10.73"
+hex = "0.4"
+
+[profile.release]
+opt-level = "s"     # Optimize for size (but not at expense of speed)
+lto = true          # Enable Link Time Optimization
+codegen-units = 1   # Reduce number of codegen units to increase optimizations
+panic = "abort"     # Abort on panic instead of unwinding
+strip = true        # Strip symbols from binary
