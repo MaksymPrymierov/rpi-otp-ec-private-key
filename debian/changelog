@@ -1,3 +1,9 @@
+rpi-otp-ec-private-key (0.1.1) bookworm; urgency=medium
+
+  * Build using dh-cargo
+
+ -- Richard Oliver <richard.oliver@raspberrypi.com>  Wed, 09 Jul 2025 11:20:53 +0100
+
 rpi-otp-ec-private-key (0.1.0) bookworm; urgency=medium
 
   * Initial release
