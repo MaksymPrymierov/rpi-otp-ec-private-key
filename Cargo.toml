@@ -12,8 +12,8 @@ keywords = ["raspberry-pi", "ecdsa", "otp", "cryptography", "pem"]
 categories = ["cryptography", "embedded"]
 
 [dependencies]
-openssl = "0.10.73"
-hex = "0.4"
+openssl = "0.10.45"
+hex = "0.4.3"
 
 [profile.release]
 opt-level = "s"     # Optimize for size (but not at expense of speed)

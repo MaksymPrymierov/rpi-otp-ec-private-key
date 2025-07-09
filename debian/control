@@ -3,8 +3,9 @@ Section: utils
 Priority: optional
 Maintainer: Richard Oliver <richard.oliver@raspberrypi.com>
 Build-Depends: debhelper-compat (= 13),
-               cargo,
-               rustc,
+               dh-cargo (>= 25),
+               librust-hex-dev,
+               librust-openssl-dev,
                libssl-dev,
                pkg-config,
                pandoc,

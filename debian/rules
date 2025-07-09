@@ -8,27 +8,9 @@ export DEB_BUILD_MAINT_OPTIONS = hardening=+all
 export DEB_CFLAGS_MAINT_APPEND = -Wall -pedantic
 export DEB_LDFLAGS_MAINT_APPEND = -Wl,--as-needed
 
-# Set Rust flags for optimised build
-export CARGO_BUILD_JOBS = $(shell nproc)
-export CARGO_TARGET_DIR = target
-
 %:
-	dh $@
-
-override_dh_auto_build:
-	cargo build --release
-
-override_dh_auto_test:
-	cargo test --release
+	dh $@ --buildsystem=cargo
 
 execute_before_dh_install:
 	pandoc rpi-otp-ec-private-key.md --standalone --to=man --shift-heading-level-by=-1 \
 		--output=debian/rpi-otp-ec-private-key.1
-
-override_dh_auto_install:
-	install -D -m 755 target/release/rpi-otp-ec-private-key $(CURDIR)/debian/rpi-otp-ec-private-key/usr/bin/rpi-otp-ec-private-key
-
-override_dh_auto_clean:
-	cargo clean || true
-	rm -rf target/
-	rm -f Cargo.lock.bak 

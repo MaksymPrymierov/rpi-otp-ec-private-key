@@ -1,4 +1,5 @@
 # Rust build artifacts
+.cargo-checksum.json
 target/
 **/*.rs.bk
 Cargo.lock
@@ -12,6 +13,8 @@ debian/.debhelper/
 debian/rpi-otp-ec-private-key.substvars
 debian/rpi-otp-ec-private-key.debhelper.log
 debian/tmp/
+debian/cargo_home/
+debian/cargo_registry/
 *.tar.gz
 *.tar.xz
 *.tar.bz2
