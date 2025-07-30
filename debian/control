@@ -10,7 +10,7 @@ Build-Depends: debhelper-compat (= 13),
                pkg-config,
                pandoc,
                rpi-eeprom
-Standards-Version: 4.6.0
+Standards-Version: 4.7.2
 Homepage: https://raspberrypi.com/software
 Vcs-Git: https://github.com/raspberrypi/rpi-otp-ec-private-key.git
 Vcs-Browser: https://github.com/raspberrypi/rpi-otp-ec-private-key
