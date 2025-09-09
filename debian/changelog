@@ -1,3 +1,9 @@
+rpi-otp-ec-private-key (0.1.3) trixie; urgency=medium
+
+  * debian: control: Set {Static-,}Built-Using
+
+ -- Richard Oliver <richard.oliver@raspberrypi.com>  Tue, 09 Sep 2025 15:13:14 +0100
+
 rpi-otp-ec-private-key (0.1.2) trixie; urgency=medium
 
   * debian: Update for Trixie
