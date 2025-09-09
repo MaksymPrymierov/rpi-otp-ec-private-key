@@ -18,6 +18,8 @@ Rules-Requires-Root: no
 
 Package: rpi-otp-ec-private-key
 Architecture: any
+Built-Using: ${cargo:Built-Using}
+Static-Built-Using: ${cargo:Static-Built-Using}
 Depends: ${shlibs:Depends}, ${misc:Depends}, raspi-utils-core
 Description: Generate ECDSA private key PEM from Raspberry Pi OTP
  This utility reads a 32-byte private key from Raspberry Pi OTP (One Time
