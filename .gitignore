@@ -2,7 +2,6 @@
 .cargo-checksum.json
 target/
 **/*.rs.bk
-Cargo.lock
 
 # Debian build artifacts
 debian/rpi-otp-ec-private-key/
